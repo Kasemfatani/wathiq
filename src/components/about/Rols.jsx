@@ -2,7 +2,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import icon from '/public/Icon.png'
+import icon1 from '/public/icons/1.webp'
+import icon2 from '/public/icons/2.webp'
+import icon3 from '/public/icons/3.webp'
+import icon4 from '/public/icons/4.webp'
 import img3 from '/public/values-img.png'
 import img4 from '/public/values-i1.png'
 import img5 from '/public/values-i2.png'
@@ -16,25 +19,25 @@ export default function Book() {
                 <div className="about-goals-cont">
                     <div className="about-goals-item">
                         <figure>
-                            <Image src={icon} alt="icon" />
+                            <Image src={icon1} alt="icon" />
                         </figure>
                         <p>الجودة والتميز. </p>
                     </div>
                     <div className="about-goals-item">
                         <figure>
-                            <Image src={icon} alt="icon" />
+                            <Image src={icon2} alt="icon" />
                         </figure>
                         <p>الشفافية والمصداقية. </p>
                     </div>
                     <div className="about-goals-item">
                         <figure>
-                            <Image src={icon} alt="icon" />
+                            <Image src={icon3} alt="icon" />
                         </figure>
                         <p>الأمانة والإتقان. </p>
                     </div>
                     <div className="about-goals-item">
                         <figure>
-                            <Image src={icon} alt="icon" />
+                            <Image src={icon4} alt="icon" />
                         </figure>
                         <p>التطور المستمر. </p>
                     </div>

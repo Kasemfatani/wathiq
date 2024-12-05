@@ -2,13 +2,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import part1 from '/public/1.png';
-import part2 from '/public/2.png';
-import part3 from '/public/3.png';
-import part4 from '/public/4.png';
-import part5 from '/public/5.png';
-import part6 from '/public/6.png';
-import part7 from '/public/7.png';
+import part1 from '/public/customers/1.png';
+import part2 from '/public/customers/2.png';
+import part3 from '/public/customers/3.png';
+import part4 from '/public/customers/4.png';
+import part5 from '/public/customers/5.png';
+import part6 from '/public/customers/6.png';
+import part7 from '/public/customers/7.png';
 import NumberTicker from '../ui/number-ticker';
 
 export default function Parteners() {

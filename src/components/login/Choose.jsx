@@ -6,13 +6,14 @@ import user2 from '/public/user2.svg'
 import user3 from '/public/user3.svg'
 import user4 from '/public/user4.svg'
 import user5 from '/public/user5.svg'
+import Link from 'next/link';
 export default function Book() {
     let users = [
-        { id: 1, image: user1, name: "موظف" },
-        { id: 2, image: user2, name: "مشرف" },
-        { id: 3, image: user3, name: "ناقل" },
-        { id: 4, image: user4, name: "عميل" },
-        { id: 5, image: user5, name: "مندوب" },
+        { id: 1, image: user1, name: "موظف" , url:"https://wathiq.io/staff/login"},
+        { id: 2, image: user2, name: "مشرف" ,url:"https://wathiq.io/supervisor/login"},
+        { id: 3, image: user3, name: "ناقل",url:"https://wathiq.io/login" },
+        { id: 4, image: user4, name: "عميل" ,url:"https://wathiq.io/station/login"},
+        { id: 5, image: user5, name: "مندوب",url:"https://wathiq.io/representative/login"},
     ]
 
     return (
@@ -21,10 +22,10 @@ export default function Book() {
             <div className="users">
                 {
                     users.map((user) =>
-                        <div className="user-item" key={user.id}>
+                        <Link href={user.url} className="user-item" key={user.id}>
                             <Image src={user.image} alt="Mazar" width={100} height={100} />
                             <h3>{user.name}</h3>
-                        </div>
+                        </Link >
                     )
                 }
             </div>

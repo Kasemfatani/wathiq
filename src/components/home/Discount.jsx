@@ -10,11 +10,10 @@ export default function Discount() { // Defining the main functional component n
                 <div className="container m-auto">
                     <div className="relat">
                         <span className='abs-span'>خصم </span>
-                        <h2>سارع بأخذ خصم اليوم الوطني السعودي</h2>
-                        <p>لأننا نقدم حلاً متكاملاً وسلسًا يضمن الشفافية والأمان ويعمل بشكل مؤتمت وبدون تعقيد، على عكس الحلول التقليدية التي تتطلب جهدًا ووقتًا كبيرًا​</p>
+                        <h2>اشترك، واحصل على خصم 20% عرض نهاية السنة.</h2>
                         <div className="links">
-                            <Link href="#" className='yellow-btn order'>طلب النظام </Link>
-                            <Link href="#" className='yellow-btn tagr'>اطلب نسختك التجريبيه</Link>
+                            <Link href="/book" className='yellow-btn order'>طلب النظام </Link>
+                            <Link href="https://wa.me/+966551314455?text=Good%20Morning%20Wathiq" className='yellow-btn tagr'>اطلب نسختك التجريبيه</Link>
                         </div>
                     </div>
                 </div>

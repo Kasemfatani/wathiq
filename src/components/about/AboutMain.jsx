@@ -2,7 +2,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import icon from '/public/Icon.png'
+import icon1 from '/public/goals/1.webp'
+import icon2 from '/public/goals/2.webp'
+import icon3 from '/public/goals/3.webp'
+import icon4 from '/public/goals/4.webp'
+import icon5 from '/public/goals/5.webp'
+// import icon6 from '/public/goals/6.webp'
+
 import bg from '/public/about-bg.jpg'
 
 export default function AboutMain() {
@@ -29,31 +35,31 @@ export default function AboutMain() {
                             <div className="about-goals-cont">
                                 <div className="about-goals-item">
                                     <figure>
-                                        <Image  src={icon} alt="icon" />
+                                        <Image  src={icon1} alt="icon" />
                                     </figure>
                                     <p>زيادة مستوى الأمان والسلامة في عمليات النقل.</p>
                                 </div>
                                 <div className="about-goals-item">
                                     <figure>
-                                        <Image  src={icon} alt="icon" />
+                                        <Image  src={icon2} alt="icon" />
                                     </figure>
                                     <p>رقمنه وأتمتة عمليات النقل وحفظها. </p>
                                 </div>
                                 <div className="about-goals-item">
                                     <figure>
-                                        <Image  src={icon} alt="icon" />
+                                        <Image  src={icon3} alt="icon" />
                                     </figure>
                                     <p>زيادة مستوى الأمان والسلامة في عمليات النقل.</p>
                                 </div>
                                 <div className="about-goals-item">
                                     <figure>
-                                        <Image  src={icon} alt="icon" />
+                                        <Image  src={icon4} alt="icon" />
                                     </figure>
                                     <p>زيادة مستوى الأمان والسلامة في عمليات النقل.</p>
                                 </div>
                                 <div className="about-goals-item">
                                     <figure>
-                                        <Image  src={icon} alt="icon" />
+                                        <Image  src={icon5} alt="icon" />
                                     </figure>
                                     <p>زيادة مستوى الأمان والسلامة في عمليات النقل.</p>
                                 </div>

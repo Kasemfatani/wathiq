@@ -8,51 +8,54 @@ import { useRouter } from 'next/navigation';
 export default function Header() {
   const router = useRouter()
   let [lang, setLang] = useState('en');
+  function handleClose(){
+    document.querySelector('html').style.overflowY = 'unset';
+    document.querySelector('.side-menu').classList.toggle('side-menu-active')
+    document.querySelector('.menu-bars').classList.toggle('hidden')
+    document.querySelector('.menu-bars-X').classList.toggle('hidden')
+    document.querySelector('.X-overlay').classList.toggle('hidden')
+  }
 
   return (
     <>
       <header className="header">
+        <div className="X-overlay hidden" onClick={handleClose}></div>
         <div className="container m-auto flex items-center gap-2 justify-between">
           <Link href="/"> <Image src={logo} alt="logo" className="logo-img" /></Link>
           <div className="links">
-            <Link href="/#about">عن واثق</Link>
-            <Link href="/#blogs">المدونات</Link>
-            <Link href="/#contact">تواصل معنا</Link>
-            <Link href="/order" className='book-link' >طلب النظام</Link>
+            <Link href="/">الرئيسية</Link>
+            <Link href="/about">عن واثق</Link>
+            <Link href="/#footer">تواصل معنا</Link>
+            <Link href="/book" className='book-link' >طلب النظام</Link>
           </div>
 
 
           <Menu className='menu-bars' onClick={() => {
+            document.querySelector('html').style.overflowY = 'hidden';
             document.querySelector('.side-menu').classList.toggle('side-menu-active')
             document.querySelector('.menu-bars').classList.toggle('hidden')
             document.querySelector('.menu-bars-X').classList.toggle('hidden')
+            document.querySelector('.X-overlay').classList.toggle('hidden')
           }} />
-          <X className='menu-bars-X hidden' onClick={() => {
-            document.querySelector('.side-menu').classList.toggle('side-menu-active')
-            document.querySelector('.menu-bars').classList.toggle('hidden')
-            document.querySelector('.menu-bars-X').classList.toggle('hidden')
-          }} />
-          <div className="side-menu" onClick={() => {
-            document.querySelector('.side-menu').classList.toggle('side-menu-active')
-            document.querySelector('.menu-bars').classList.toggle('hidden')
-            document.querySelector('.menu-bars-X').classList.toggle('hidden')
-          }}>
-            <div className="links">
-              <Link href="/#about">عن واثق</Link>
-              <Link href="/#blogs">المدونات</Link>
-              <Link href="/#contact">تواصل معنا</Link>
-              <Link href="/order" className='book-link' >طلب النظام</Link>
+          <X className='menu-bars-X hidden' onClick={handleClose} />
+          <div className="side-menu" onClick={handleClose}>
+            <div className="links" onClick={handleClose} >
+              <Link href="/" onClick={handleClose}>الرئيسية</Link>
+              <Link href="/about" onClick={handleClose}>عن واثق</Link>
+              <Link href="/#footer" onClick={handleClose}>تواصل معنا</Link>
+              <Link href="/book" className='book-link'onClick={handleClose} >طلب النظام</Link>
             </div>
           </div>
         </div>
       </header>
       <div className="offer-header">
-          <div className="offer-text">
-            <p>اشترك الان واحصل علي خصم اليوم الوطني السعودي ,اشترك الان </p>
-            <X size={28} className='shrink-0' onClick={() => {
-              document.querySelector('.offer-header').classList.toggle('hidden')
-            }} />
-          </div>
+        <div className="offer-text">
+          <p>اشترك، واحصل على خصم 20% عرض نهاية السنة.</p>
+          <X size={28} className='shrink-0' onClick={() => {
+            document.querySelector('.offer-header').classList.toggle('hidden')
+
+          }} />
+        </div>
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import analysis from '/public/analysis.png';
 import img2 from '/public/HeroBg.jpg';
 import img3 from '/public/saa.jpeg';
 import img4 from '/public/customer.png';
-import img5 from '/public/tab2.png';
+import img5 from '/public/owner.png';
 import Image from 'next/image';
 export default function Brief() { // Defining the main functional component named 'Footer'.
     const [activeTab, setActiveTab] = useState(1);

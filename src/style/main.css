@@ -1911,7 +1911,7 @@ body {
   justify-content: center;
 }
 .about-page .values-img-cont figure img {
-  width: 100%;
+  width: 40%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;

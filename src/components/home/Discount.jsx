@@ -13,7 +13,7 @@ export default function Discount() { // Defining the main functional component n
                         <h2>اشترك، واحصل على خصم 20% عرض نهاية السنة.</h2>
                         <div className="links">
                             <Link href="/book" className='yellow-btn order'>طلب النظام </Link>
-                            <Link href="https://wa.me/+966551314455?text=Good%20Morning%20Wathiq" className='yellow-btn tagr'>اطلب نسختك التجريبيه</Link>
+                            {/* <Link href="https://wa.me/+966551314455?text=Good%20Morning%20Wathiq" className='yellow-btn tagr'>اطلب نسختك التجريبيه</Link> */}
                         </div>
                     </div>
                 </div>

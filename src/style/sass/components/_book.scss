@@ -242,11 +242,12 @@ body {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 
     .PhoneInputCountry {
         display: flex;
         height: 55px;
+        width: 105px;
         border-radius: 2px;
         border: 1px solid #e3e3e3;
         background-color: #F9F9F9;
@@ -254,11 +255,11 @@ body {
         // width: 100px;
         margin-top: 12px;
         margin-bottom: 16px;
-        max-width: 70px;
+        max-width: 110px;
     }
 
     .PhoneInputCountrySelect {
-        width: 20px;
+        width: 100%;
         // display: none;
     }
 
@@ -267,7 +268,7 @@ body {
         height: 55px;
         padding: 3px;
         max-width: 50px;
-
+        display: none;
         input:focus-visible {
             border: none;
             outline: none;
@@ -286,7 +287,7 @@ body {
 }
 
 .book-main-page .book-cont .form form .PhoneInputCountry {
-    width: 100px;
+    width: 106px;
     flex-shrink: 0;
 }
 
@@ -297,6 +298,9 @@ body {
 }
 
 @media (max-width: 767px) {
+    .book-main-page .book-cont .form{
+        padding: 24px 12px;
+    }
     .book-main-page .user .users {
         grid-template-columns: repeat(2, 1fr);
     }

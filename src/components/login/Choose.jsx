@@ -20,21 +20,21 @@ export default function Book() {
     return (
         <div className="user">
             <h2>اي شخص انت ؟</h2>
-            <div className="flex justify-center w-full gap-3">
-                <div className="sectio border border-[#f9f9f9] p-5 rounded-xl flex items-center gap-7 ">
+            <div className="flex justify-center flex-wrap w-full gap-3">
+                <div className="sectio border border-[#f9f9f9] justify-center flex-wrap p-5 rounded-xl flex items-center gap-7 ">
                 {
                     spicialUsers.map((user) =>
-                        <Link href={user.url} className="user-item min-w-48" key={user.id}>
+                        <Link href={user.url} className="user-item w-fit min-w-48" key={user.id}>
                             <Image src={user.image} alt="Mazar" width={100} height={100} />
                             <h3>{user.name}</h3>
                         </Link >
                     )
                 }
                 </div>
-                <div className="sectio border border-[#f9f9f9] p-5 rounded-xl flex items-center gap-7 ">
+                <div className="sectio border border-[#f9f9f9] justify-center flex-wrap  p-5 rounded-xl flex items-center gap-7 ">
                 {
                     normalUsers.map((user) =>
-                        <Link href={user.url} className="user-item min-w-48" key={user.id}>
+                        <Link href={user.url} className="user-item w-fit min-w-48" key={user.id}>
                             <Image src={user.image} alt="Mazar" width={100} height={100} />
                             <h3>{user.name}</h3>
                         </Link >

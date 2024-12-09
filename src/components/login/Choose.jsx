@@ -10,24 +10,37 @@ import Link from 'next/link';
 export default function Book() {
     let users = [
         { id: 1, image: user1, name: "موظف" , url:"https://wathiq.io/staff/login"},
-        { id: 2, image: user2, name: "مشرف" ,url:"https://wathiq.io/supervisor/login"},
         { id: 3, image: user3, name: "ناقل",url:"https://wathiq.io/login" },
+        { id: 2, image: user2, name: "مشرف" ,url:"https://wathiq.io/supervisor/login"},
         { id: 4, image: user4, name: "عميل" ,url:"https://wathiq.io/station/login"},
         { id: 5, image: user5, name: "مندوب",url:"https://wathiq.io/representative/login"},
     ]
-
+    let spicialUsers = users.slice(0, 2);
+    let normalUsers = users.slice(2);
     return (
         <div className="user">
             <h2>اي شخص انت ؟</h2>
-            <div className="users">
+            <div className="flex justify-center w-full gap-3">
+                <div className="sectio border border-[#f9f9f9] p-5 rounded-xl flex items-center gap-7 ">
                 {
-                    users.map((user) =>
-                        <Link href={user.url} className="user-item" key={user.id}>
+                    spicialUsers.map((user) =>
+                        <Link href={user.url} className="user-item min-w-48" key={user.id}>
                             <Image src={user.image} alt="Mazar" width={100} height={100} />
                             <h3>{user.name}</h3>
                         </Link >
                     )
                 }
+                </div>
+                <div className="sectio border border-[#f9f9f9] p-5 rounded-xl flex items-center gap-7 ">
+                {
+                    normalUsers.map((user) =>
+                        <Link href={user.url} className="user-item min-w-48" key={user.id}>
+                            <Image src={user.image} alt="Mazar" width={100} height={100} />
+                            <h3>{user.name}</h3>
+                        </Link >
+                    )
+                }
+                </div>
             </div>
         </div>
     );

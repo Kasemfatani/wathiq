@@ -1484,7 +1484,7 @@ body {
   gap: 30px;
   width: 100%;
 }
-.book-main-page .user .users .user-item {
+.book-main-page .user .user-item {
   background-color: #E0F5F5;
   width: 100%;
   border-radius: 14px;
@@ -1494,13 +1494,19 @@ body {
   align-items: center;
   gap: 11px;
 }
-.book-main-page .user .users .user-item h3 {
+.book-main-page .user .user-item h3 {
   font-size: 24px;
   font-weight: 700;
   color: #444444;
 }
-.book-main-page .user .users .user-item img {
+.book-main-page .user .user-item img {
   width: 64px;
+}
+.book-main-page .user .user-item:hover {
+  background-color: var(--main-hover);
+}
+.book-main-page .user .user-item:hover h3 {
+  color: var(--white-color);
 }
 
 .PhoneInput {

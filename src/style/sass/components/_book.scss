@@ -212,26 +212,32 @@ body {
             align-items: flex-start;
             gap: 30px;
             width: 100%;
+        }
 
-            .user-item {
-                background-color: #E0F5F5;
-                width: 100%;
-                border-radius: 14px;
-                padding: 25px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 11px;
+        .user-item {
+            background-color: #E0F5F5;
+            width: 100%;
+            border-radius: 14px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 11px;
 
-                h3 {
-                    font-size: 24px;
-                    font-weight: 700;
-                    color: #444444;
-                }
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #444444;
+            }
 
-                img {
-                    width: 64px;
-                }
+            img {
+                width: 64px;
+            }
+        }
+        .user-item:hover {
+            background-color: $hover;
+            h3{
+                color: $white;
             }
         }
     }
@@ -269,6 +275,7 @@ body {
         padding: 3px;
         max-width: 50px;
         display: none;
+
         input:focus-visible {
             border: none;
             outline: none;
@@ -298,9 +305,10 @@ body {
 }
 
 @media (max-width: 767px) {
-    .book-main-page .book-cont .form{
+    .book-main-page .book-cont .form {
         padding: 24px 12px;
     }
+
     .book-main-page .user .users {
         grid-template-columns: repeat(2, 1fr);
     }

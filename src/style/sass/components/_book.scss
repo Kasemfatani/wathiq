@@ -266,6 +266,9 @@ body {
 
     .PhoneInputCountrySelect {
         width: 100%;
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+        }
         // display: none;
     }
 
@@ -296,6 +299,9 @@ body {
 .book-main-page .book-cont .form form .PhoneInputCountry {
     width: 106px;
     flex-shrink: 0;
+    @media screen and (max-width: 767px) {
+        width: 80px;
+    }
 }
 
 @media (max-width: 1024px) {

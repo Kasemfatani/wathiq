@@ -1936,6 +1936,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 0% 0%;
+     object-position: 0% 0%;
 }
 .about-page .values-i1 {
   position: absolute;

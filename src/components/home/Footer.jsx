@@ -11,7 +11,7 @@ export default function Footer() { // Defining the main functional component nam
 
     return (
         <footer id='footer'> {/* Main footer container with padding and background color */}
-            <Link href="https://wa.me/+966551314455?text=Good%20Morning%20Wathiq" className="fixed-what">
+            <Link href="https://wa.me/+966551314455?text=Good%20Morning%20Wathiq" target="_blank" className="fixed-what">
                 <i className="fa-brands fa-whatsapp"></i>
             </Link>
             <div className="container m-auto">

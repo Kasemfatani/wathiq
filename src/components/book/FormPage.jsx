@@ -49,7 +49,7 @@ export default function FormPage(props) {
     const [language, setLanguage] = useState('en');  // Default language is 'en'
     let [passedData, setPassedData] = useState({});
     const sendPostRequest = async (data) => {
-        const url = 'https://wathiq.io/api/place-order';
+        const url = 'https://app.wathiq.io/api/place-order';
         console.log(data);
         const queryParams = {
             customer_name: data?.name,

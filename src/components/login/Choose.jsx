@@ -9,11 +9,11 @@ import user5 from '/public/user5.svg'
 import Link from 'next/link';
 export default function Book() {
     let users = [
-        { id: 1, image: user1, name: "موظف" , url:"https://app.wathiq.io/staff/login"},
-        { id: 3, image: user3, name: "ناقل",url:"https://app.wathiq.io/login" },
-        { id: 2, image: user2, name: "مشرف" ,url:"https://app.wathiq.io/supervisor/login"},
-        { id: 4, image: user4, name: "عميل" ,url:"https://app.wathiq.io/station/login"},
-        { id: 5, image: user5, name: "مندوب",url:"https://app.wathiq.io/representative/login"},
+        { id: 1, image: user1, name: "موظف" , url:"https://dev.wathiq.io/staff/login"},
+        { id: 3, image: user3, name: "ناقل",url:"https://dev.wathiq.io/login" },
+        { id: 2, image: user2, name: "مشرف" ,url:"https://dev.wathiq.io/supervisor/login"},
+        { id: 4, image: user4, name: "عميل" ,url:"https://dev.wathiq.io/station/login"},
+        { id: 5, image: user5, name: "مندوب",url:"https://dev.wathiq.io/representative/login"},
     ]
     let spicialUsers = users.slice(0, 2);
     let normalUsers = users.slice(2);

@@ -22,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="ar" dir='rtl' id='root'>
       <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-DWQC951DYB"></Script>
+        {/* Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-Q49330T3HT"></Script>
         <Script id='google-analytics'>
           {`
             window.dataLayer = window.dataLayer || [];
@@ -32,6 +33,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
+      {/* Google Tag Manager */}
       <GoogleTagManager gtmId='GTM-NT2XLMP7' />
       <body className="w-full" suppressHydrationWarning={true}>
         <Header />

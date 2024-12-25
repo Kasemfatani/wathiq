@@ -1235,6 +1235,9 @@ footer .content {
 }
 footer .content .logo {
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 footer .content .logo img {
   width: 100%;

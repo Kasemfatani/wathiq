@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react'; // Importing React to use JSX syntax and create components.
 import { motion } from 'framer-motion';
 import logo from '/public/logo2.svg'
+import SaudiTech from '/public/saudiTech.png'
 
 
 
@@ -17,7 +18,8 @@ export default function Footer() { // Defining the main functional component nam
             <div className="container m-auto">
                 <div className="content">
                     <div className="logo">
-                        <Image src={logo} alt="logo" />
+                        <Image src={logo} alt="Wathiq" />
+                        <Image src={SaudiTech} alt="Wathiq" />
                     </div>
                     <div className="links">
                         <h3>روابط سريعة</h3>

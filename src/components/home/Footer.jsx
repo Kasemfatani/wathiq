@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react'; // Importing React to use JSX syntax and create components.
 import { motion } from 'framer-motion';
 import logo from '/public/logo2.svg'
-import SaudiTech from '/public/saudiTech.png'
+import SaudiTech from '../../../public/SaudiTech.png'
 
 
 

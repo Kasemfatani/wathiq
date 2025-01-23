@@ -48,7 +48,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <div className="offer-header">
+      {/* <div className="offer-header">
         <div className="offer-text">
           <p>اشترك، واحصل على خصم 20% عرض نهاية السنة.</p>
           <X size={28} className='shrink-0' onClick={() => {
@@ -56,7 +56,7 @@ export default function Header() {
 
           }} />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

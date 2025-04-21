@@ -1,18 +1,27 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'; // Importing React to use JSX syntax and create components.
-import { motion } from 'framer-motion';
+import React , { useEffect, useState } from 'react'; // Importing React to use JSX syntax and create components.
 import logo from '/public/logo2.svg'
 import SaudiTech from '../../../public/SaudiTech.png'
+import { useSearchParams } from 'next/navigation';
 
 
 
 export default function Footer() { // Defining the main functional component named 'Footer'.
+    const searchParams = useSearchParams();
+    const [gclid, setGclid] = useState(null); // Store GCLID
+    useEffect(() => {
+        // Extract GCLID from the URL
+        const gclidValue = searchParams.get('gclid');
+        if (gclidValue) {
+            setGclid(gclidValue);
+        }
 
+    }, [searchParams]);
     return (
         <footer id='footer'> {/* Main footer container with padding and background color */}
-            <Link href="https://wa.me/+966551314455?text=Good%20Morning%20Wathiq" target="_blank" className="fixed-what">
+            <Link href={`https://wa.me/+966551314455?text=Good%20Morning%20Wathiq` + (gclid ? ` number ${gclid}` : '')} target="_blank" className="fixed-what">
                 <i className="fa-brands fa-whatsapp"></i>
             </Link>
             <div className="container m-auto">
@@ -50,7 +59,7 @@ export default function Footer() { // Defining the main functional component nam
                     </div>
                 </div>
                 <div className="served">
-                © 2024, كل الحقوق محفوظه ل واثق
+                    © 2024, كل الحقوق محفوظه ل واثق
                 </div>
             </div>
         </footer>

@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import validator from "validator";
 import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import PhnoeInput from 'react-phone-number-input'; // Importing a phone number input component.
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from '@/components/ui/form';
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue, } from '@/components/ui/select';
@@ -15,16 +15,26 @@ import { motion } from 'framer-motion'; // Importing the motion component from F
 import axios from 'axios';
 import { Textarea } from '../ui/textarea';
 export default function FormPage() {
-    const [data, setData] = useState(null);
+    const searchParams = useSearchParams();
+    const [gclid, setGclid] = useState(null); // Store GCLID
+    useEffect(() => {
+        // Extract GCLID from the URL
+        const gclidValue = searchParams.get('gclid');
+        if (gclidValue) {
+            setGclid(gclidValue);
+        }
+
+    }, [searchParams]);
+    console.log(gclid);
     const sendPostRequest = async (data) => {
         const url = 'https://dev.wathiq.io/api/place-order';
-        console.log(data);
         const queryParams = {
             customer_name: data?.name,
             customer_mobile: data?.phone,
             customer_email: data?.email,
             customer_organization_size: data.destniation,
             customer_notes: data.comments,
+            gclid: gclid
         };
         return axios({
             method: 'post',
@@ -38,14 +48,12 @@ export default function FormPage() {
         })
     };
    
-    console.log(data);
     const router = useRouter()
     const [date, setDate] = useState(new Date());
     const [visited, setVisited] = useState(false);
     const [captchaa, setCaptchaa] = useState(false);
     function onChange(value) {
         setCaptchaa(true);
-        console.log(captchaa);
     }
     const formSchema = z
         .object({
@@ -70,8 +78,6 @@ export default function FormPage() {
     const Submit = (data) => {
         setVisited(true);
         if (captchaa) {
-            console.log("ffffffff");
-            console.log(data);
             sendPostRequest(data);
         }
     };

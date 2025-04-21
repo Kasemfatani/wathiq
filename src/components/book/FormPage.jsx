@@ -31,9 +31,9 @@ export default function FormPage() {
         const queryParams = {
             customer_name: data?.name,
             customer_mobile: data?.phone,
-            customer_email: data?.email,
             customer_organization_size: data.destniation,
             customer_notes: data.comments,
+            customer_email: data?.email,
             gclid: gclid
         };
         return axios({

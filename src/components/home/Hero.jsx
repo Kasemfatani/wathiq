@@ -17,7 +17,7 @@ export default function Hero() {
                     <p>راقب نقل المنتجات البترولية واضمن  وصولها بنفس الجودة والكمية</p>
                     <div className="links">
                         {/* <Link href="https://wa.me/+966551314455?text=Good%20Morning%20Wathiq" className='main-link' >اطلب نسختك التجريبيه </Link> */}
-                        <Link href="/book" className='sec-link' >جرب النظام مجانا</Link>
+                        <Link href="/book" className='sec-link' > جرب النظام مجانا لمدة شهر </Link>
                     </div>
                 </div>
                 <motion.div

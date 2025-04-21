@@ -29,7 +29,7 @@ export default function AboutMain() {
                             ورفع مستوى الأمان والسلامة والحوكمة والشفافية في عمليات النقل،
                             والقطاع بشكل عام.
                         </p>
-                        <Link href="#" className="main-btn">اطلب نسختك التجريبيه</Link>
+                        <Link href="#" className="main-btn"> جرب النظام مجانا لمدة شهر </Link>
                         <div className="about-goals">
                             <h4 className="about-goals-title">اهدافنا:</h4>
                             <div className="about-goals-cont">

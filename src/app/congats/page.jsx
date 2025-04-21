@@ -10,8 +10,8 @@ export default function Book() {
     return (
         <div className="popup" >
             <div className="popup-cont">
-                <Image src={doneImage} alt="Mazar" className="img" />
-                <h2>Welcome to Mzar </h2>
+                <Image src={doneImage} alt="Wathiq" className="img" />
+                <h2>Welcome to Wathiq </h2>
                 <p>Our team will contact you shortly on WhatsApp to guide you through the next steps of your journey. We look forward to assisting you!</p>
             </div>
         </div>

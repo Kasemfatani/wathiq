@@ -30,7 +30,7 @@ export default function Parteners() {
                 )}
             >
                 <div className="part" >
-                    <Image src={img} alt="Mazar" width={200} height={200} />
+                    <Image src={img} alt="Wathiq" width={200} height={200} />
                 </div>
             </figure>
         );

@@ -25,7 +25,7 @@ export default function Book() {
                 {
                     spicialUsers.map((user) =>
                         <Link href={user.url} className="user-item w-fit min-w-48" key={user.id}>
-                            <Image src={user.image} alt="Mazar" width={100} height={100} />
+                            <Image src={user.image} alt="Wathiq" width={100} height={100} />
                             <h3>{user.name}</h3>
                         </Link >
                     )
@@ -35,7 +35,7 @@ export default function Book() {
                 {
                     normalUsers.map((user) =>
                         <Link href={user.url} className="user-item w-fit min-w-48" key={user.id}>
-                            <Image src={user.image} alt="Mazar" width={100} height={100} />
+                            <Image src={user.image} alt="Wathiq" width={100} height={100} />
                             <h3>{user.name}</h3>
                         </Link >
                     )

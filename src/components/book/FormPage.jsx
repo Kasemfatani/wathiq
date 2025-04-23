@@ -44,7 +44,7 @@ export default function FormPage() {
                 lang: 'en',
             },
         }).then(response => {
-            router.push('/congats');           
+            router.push(`/congats?name=${data?.name}&phone=${data?.phone}&email=${data?.email}&size=${data?.destniation}`);           
         })
     };
    
@@ -78,6 +78,16 @@ export default function FormPage() {
     const Submit = (data) => {
         setVisited(true);
         if (captchaa) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'form_submission',
+                customer_name: data.name,
+                customer_phone: data.phone,
+                customer_email: data.email,
+                customer_organization_size: data.destniation,
+                gclid: gclid // Pass GCLID here
+            });
+
             sendPostRequest(data);
         }
     };

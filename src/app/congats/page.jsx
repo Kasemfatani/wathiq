@@ -4,13 +4,14 @@ import doneImage from '/public/done.svg';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import Loading from '../loading';
-export default function bookWrapper() {
+
+export default function page() {
     <Suspense fallback={<Loading />}>
-        <Book />
+        <Congats />
     </Suspense>
 }
 
-function Book() {
+function Congats() {
     const searchParams = useSearchParams();  // Fixed variable name
     const name = searchParams.get('name');
     const phone = searchParams.get('phone');
